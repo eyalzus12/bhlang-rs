@@ -10,4 +10,4 @@
 mod lang_file;
 
 // Re-exports
-pub use lang_file::LangFile;
+pub use lang_file::*;
