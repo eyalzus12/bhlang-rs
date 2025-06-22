@@ -20,9 +20,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     entries.sort();
     for (key, value) in entries {
         // replace special chars
-        let cleanvalue = value.replace('\n', "\\n").replace('\r', "\\r");
+        let value = value.replace('\n', "\\n").replace('\r', "\\r");
 
-        writer.write(format!("{key}\t{cleanvalue}\n").as_bytes())?;
+        writer.write(format!("{key}\t{value}\n").as_bytes())?;
     }
 
     Ok(())
